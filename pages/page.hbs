@@ -1,0 +1,27 @@
+{{#extend "layout"}}
+    {{#content "head" mode="append"}}
+        <link rel="stylesheet" href="assets/css/home.css" />
+    {{/content}}
+ 
+    {{#content "body"}}
+        <h2>Welcome Home</h2>
+ 
+        <ul>
+            {{#items}}
+                <li>{{.}}</li>
+            {{/items}}
+        </ul>
+
+        {{#embed "main-modal"}}
+            {{#content "content"}}
+            This is the modal content
+            {{/content}}
+        {{/embed}}
+    {{/content}}
+
+
+ 
+    {{#content "foot" mode="prepend"}}
+        <script src="assets/js/analytics.js"></script>
+    {{/content}}
+{{/extend}}
